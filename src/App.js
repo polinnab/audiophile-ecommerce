@@ -1,6 +1,6 @@
 function App() {
-  const x = 4;
-  const x = 5;
+  const yy = 7;
+  const yy = 8;
   return <div></div>;
 }
 

@@ -26,8 +26,14 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn validate"
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,json}": [
+      "prettier --list-differen",
+      "eslint --ignore-path .gitignore"
+    ]
   },
   "browserslist": {
     "production": [

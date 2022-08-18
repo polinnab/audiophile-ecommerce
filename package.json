@@ -24,6 +24,11 @@
     "check-format": "yarn prettier --list-different",
     "validate": "yarn check-format && yarn lint && yarn build"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn validate"
+    }
+  },
   "browserslist": {
     "production": [
       ">0.2%",

@@ -19,8 +19,10 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "npx eslint --ignore-path .gitignore .",
-    "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|jsx|json|html)\"",
-    "validate": "yarn lint && yarn build"
+    "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|jsx|json|html)\"",
+    "format": "yarn prettier --write",
+    "check-format": "yarn prettier --list-different",
+    "validate": "yarn check-format && yarn lint && yarn build"
   },
   "browserslist": {
     "production": [

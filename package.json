@@ -22,6 +22,7 @@
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|jsx|json|html)\"",
     "format": "yarn prettier --write",
     "check-format": "yarn prettier --list-different",
+    "husky-install": "husky install",
     "validate": "yarn check-format && yarn lint && yarn build"
   },
   "husky": {

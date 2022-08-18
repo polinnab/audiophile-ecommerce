@@ -30,7 +30,7 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,json}": [
+    "**/*.{js,jsx,json}": [
       "prettier --list-differen",
       "eslint --ignore-path .gitignore"
     ]

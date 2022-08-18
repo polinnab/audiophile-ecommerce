@@ -1,6 +1,5 @@
 function App() {
-  const y = 1;
-  const ooo = 1;
+  const yyy = 66;
 
   return <div></div>;
 }

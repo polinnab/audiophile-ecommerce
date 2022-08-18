@@ -25,6 +25,15 @@
     "validate": "yarn check-format && yarn lint && yarn build",
     "postinstall": "husky install"
   },
+  "lint-staged": {
+    "*.+(js)": [
+      "eslint"
+    ],
+    "**/*.+(js|jsx|json|html)": [
+      "prettier --write",
+      "git add"
+    ]
+  },
   "browserslist": {
     "production": [
       ">0.2%",

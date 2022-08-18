@@ -22,7 +22,8 @@
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|jsx|json|html)\"",
     "format": "yarn prettier --write",
     "check-format": "yarn prettier --list-different",
-    "validate": "yarn check-format && yarn lint && yarn build"
+    "validate": "yarn check-format && yarn lint && yarn build",
+    "postinstall": "husky install"
   },
   "browserslist": {
     "production": [
@@ -38,6 +39,7 @@
   },
   "devDependencies": {
     "eslint-config-prettier": "8.5.0",
+    "husky": "^8.0.1",
     "prettier": "2.7.1"
   }
 }

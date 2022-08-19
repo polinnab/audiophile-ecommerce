@@ -1,5 +1,5 @@
 function App() {
-  return <div></div>;
+  return <div>Jest text</div>;
 }
 
 export default App;

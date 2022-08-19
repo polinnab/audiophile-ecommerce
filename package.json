@@ -22,7 +22,7 @@
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|jsx|json|html)\"",
     "format": "yarn prettier --write",
     "check-format": "yarn prettier --list-different",
-    "validate": "npm-run-all --parallel check-format lint build",
+    "validate": "npm-run-all --parallel check-format lint test build",
     "postinstall": "husky install"
   },
   "lint-staged": {

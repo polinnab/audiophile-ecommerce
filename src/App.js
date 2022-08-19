@@ -1,6 +1,5 @@
 function App() {
-  console.log('hdhfbmhk');
-  return <div className="bbbbbb"></div>;
+  return <div></div>;
 }
 
 export default App;

@@ -1,1 +1,1 @@
-export * from 'design-system/colors/colors';
+export * from './colors';

@@ -7,7 +7,7 @@ function Router() {
   return (
     <Routes>
       <Route path="/" element={<Navigate to={ROUTES.main_route} />} exact />
-      <Route path="*" element={<Page404 />} exact />
+      <Route path="*" element={<Page404 />} />
     </Routes>
   );
 }

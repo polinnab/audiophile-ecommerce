@@ -1,9 +1,13 @@
-import {BrowserRouter, Router} from 'react-router-dom';
+import Layout from 'components/layout/Layout';
+import {BrowserRouter} from 'react-router-dom';
+import Router from 'routes/router';
 
 function App() {
   return (
     <BrowserRouter>
-      <Router></Router>
+      <Layout>
+        <Router></Router>
+      </Layout>
     </BrowserRouter>
   );
 }

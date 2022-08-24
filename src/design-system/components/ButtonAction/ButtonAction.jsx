@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import * as actionElements from 'design-system/constants/buttonActionElements';
-import * as buttonActionThemes from 'design-system/constants/buttonActionThemes';
+import actionElements from 'design-system/constants/buttonActionElements';
+import buttonActionThemes from 'design-system/constants/buttonActionThemes';
+import * as COLORS from 'design-system/colors/index';
 
 const ButtonAction = ({
   children,
@@ -71,7 +72,74 @@ ButtonAction.defaultProps = {
   type: 'submit',
 };
 
+const buttonThemeStyles = {
+  [buttonActionThemes.PRIMARY]: `
+    background-color: ${COLORS.OCHRE};
+    color: ${COLORS.WHITE};
+    border-color: ${COLORS.OCHRE};
+
+    &:hover {
+      background-color: ${COLORS.OCHRE_LIGHT};
+      border-color: ${COLORS.OCHRE_LIGHT};
+    }
+
+    &:active {
+      background-color: ${COLORS.OCHRE_LIGHT};
+      border-color: ${COLORS.OCHRE_LIGHT};
+    }
+  `,
+  [buttonActionThemes.SECONDARY]: `
+    background-color: ${COLORS.WHITE};
+    color: ${COLORS.BLACK};
+    border-color: ${COLORS.BLACK};
+
+    &:hover {
+      background-color: ${COLORS.BLACK};
+      color: ${COLORS.WHITE};
+    }
+
+    &:active {
+      background-color: ${COLORS.BLACK};
+      color: ${COLORS.WHITE};
+    }
+  `,
+  [buttonActionThemes.TERTIARY]: `
+    background-color: ${COLORS.WHITE};
+    color: ${COLORS.BLACK};
+    border-color: ${COLORS.WHITE};
+    opacity: 0.5;
+    &::after {
+      content: ">";
+      color: ${COLORS.OCHRE};
+      font-size: 20px;
+      margin-left: 10px;
+    }
+
+    &:hover {
+      color: ${COLORS.OCHRE};
+    }
+
+    &:active {
+      color: ${COLORS.OCHRE};
+    }
+`,
+};
+
+const withThemeStyles = ({theme}) => buttonThemeStyles[theme];
+
 const ButtonActionBase = styled.button`
+  padding: 15px 5px;
   width: 160px;
   height: 48px;
+  display: flex;
+  border: 1px solid;
+  justify-content: center;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  ${withThemeStyles}
 `;
